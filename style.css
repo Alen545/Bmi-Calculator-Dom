@@ -1,0 +1,123 @@
+/* Base Reset and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Responsiveness */
+.calculator-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 450px; /* Perfect for Mobile & Desktop limits */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+/* Form Styling */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Results Display Area */
+.result-box {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    display: none; /* Hidden by default until calculated */
+}
+
+.bmi-value {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.bmi-status {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Color codes for BMI Statuses */
+.underweight { background-color: #ffeeba; color: #856404; }
+.normal { background-color: #d4edda; color: #155724; }
+.overweight { background-color: #f8d7da; color: #721c24; }
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet Layout (Screens broader than 600px) */
+@media (min-width: 600px) {
+    .calculator-container {
+        max-width: 500px;
+        padding: 40px;
+    }
+    h2 { font-size: 28px; }
+}
+
+/* Desktop/Computer Layout (Screens broader than 1024px) */
+@media (min-width: 1024px) {
+    .calculator-container {
+        max-width: 550px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    .calculator-container:hover {
+        transform: translateY(-2px);
+    }
+}
